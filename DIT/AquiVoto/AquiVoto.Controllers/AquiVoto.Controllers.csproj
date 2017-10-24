@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{236EC5C7-129F-4A9E-906A-21978AB3D76B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AquiVoto.Controllers</RootNamespace>
+    <AssemblyName>AquiVoto.Controllers</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.2\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AutenticacaoController.cs" />
+    <Compile Include="HomeController.cs" />
+    <Compile Include="PostsController.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UsuarioController.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AquiVoto.Common\AquiVoto.Common.csproj">
+      <Project>{2ed3f004-3af0-4258-81a1-55b82933b4ce}</Project>
+      <Name>AquiVoto.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AquiVoto.DataModels\AquiVoto.DataModels.csproj">
+      <Project>{5c5aeb5c-3402-47fb-b332-907cabbd1558}</Project>
+      <Name>AquiVoto.DataModels</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AquiVoto.Models\AquiVoto.Models.csproj">
+      <Project>{a3235fa1-73ac-47cf-8717-86a2149c1629}</Project>
+      <Name>AquiVoto.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AquiVoto.Services.Interfaces\AquiVoto.Services.Interfaces.csproj">
+      <Project>{1a3a1677-e2e0-451b-af66-9391c2dd05cb}</Project>
+      <Name>AquiVoto.Services.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AquiVoto.Services\AquiVoto.Services.csproj">
+      <Project>{3a9a9f82-17ba-4d48-8c6d-c87c520482a8}</Project>
+      <Name>AquiVoto.Services</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

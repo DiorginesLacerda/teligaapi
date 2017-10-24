@@ -1,0 +1,139 @@
+﻿@model AquiVoto.Models.PostModelList
+
+@if (Model != null)
+{
+    if (Model.PostsList != null)
+    {
+        if (Model.PostsList.Count() <= 0)
+        {
+            <br />
+
+            <div class="alert alert-warning" role="alert" style="margin-right:1%">
+                <strong>Não há posts para exibição.</strong>
+            </div>
+        }
+        else
+        {
+            <table class="table table-hover table-condensed">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Titulo</th>
+                        <th>Data</th>
+                        <th>Ação</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    @foreach (var item in Model.PostsList)
+                    {
+                        <tr>
+                            <td>@item.Post_Id</td>
+                            <td>@Html.ActionLink(item.Titulo, "Cadastro", "Posts", new { @id = item.Guid }, null)</td>
+                            <td>@item.Data_Votacao.ToString()</td>
+                            <td style="text-align:center">
+                                <div class="btn btn-group">
+                                    <button type="button" id="@string.Format("btnAprovar_{0}", item.Guid)" onclick="aprovarPost('@item.Guid', '@item.Titulo');" class="btn btn-primary">Aprovar</button>
+                                    <button type="button" id="@string.Format("btnRepetido_{0}", item.Guid)" onclick="postRepetido('@item.Guid', '@item.Titulo');" class="btn btn-warning">Repetido</button>
+                                    <button type="button" id="@string.Format("btnNegar_{0}", item.Guid)" onclick="negarPost('@item.Guid', '@item.Titulo');" class="btn btn-danger">Negar</button>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+
+        <!-- PAGINATION FOOTER -->
+            <nav class="text-center" id="pagination">
+                <ul class="pagination">
+
+                    @if (Model.PostsList.HasPreviousPage)
+                    {
+                        <li>
+                            <a href="#" aria-label="Previous" id="btnPreviousPage" onclick="paginaAnterior()">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                    }
+                    else
+                    {
+                        <li class="disabled">
+                            <a href="#" aria-label="Previous" id="btnPreviousPage">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                    }
+
+                    @{
+            var maximoDePaginadores = 0;
+                    }
+
+                    @for (int i = Model.PostsList.PageNumber; i <= Model.PostsList.TotalItemCount; i++)
+                    {
+                        if ((i + 1) <= Model.PostsList.TotalItemCount)
+                        {
+                            if (maximoDePaginadores <= 5)
+                            {
+                                <li><a href="#" onclick="informarPagina('@i');">@i</a></li>
+                                maximoDePaginadores++;
+                            }
+                            else
+                            {
+                                break;
+                            }
+                        }
+                    }
+
+                    @if (Model.PostsList.HasNextPage)
+                    {
+                        <li id="listNext">
+                            <a href="#" aria-label="Next" id="btnNextPage" onclick="proximaPagina()">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    }
+                    else
+                    {
+                        <li id="listNext" class="disabled">
+                            <a href="#" aria-label="Next" id="btnNextPage">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    }
+
+                </ul>
+            </nav>
+        }
+    }
+    else
+    {
+        <div class="alert alert-danger" role="alert" style="margin-right:1%">
+            <strong>Erro ocorreu no carregamento da listagem. Tente mais tarde.</strong>
+        </div>
+    }
+}
+else
+{
+    <div class="alert alert-warning" role="alert" style="margin-right:1%">
+        <strong>Erro ocorreu no carregamento dos posts. Tente mais tarde.</strong>
+    </div>
+}
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        var totalDeRegistros = 0;
+
+        if ('@Model' != null) {
+            if ('@Model.PostsList' != null) {
+                totalDeRegistros = '@Model.PostsList.TotalItemCount';
+            }
+        }
+
+        $("#titleQuantidade").empty();
+        $("#titleQuantidade").append(totalDeRegistros);
+
+        $("#paginaAtual").val('@Model.PostsList.PageNumber');
+    });
+</script>

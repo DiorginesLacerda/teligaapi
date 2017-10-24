@@ -1,0 +1,138 @@
+﻿@model AquiVoto.Models.PostModelCadastro
+
+<!-- modals-->
+@Html.Partial("~/Views/Posts/_modalsPosts.cshtml")
+
+<div class="col-lg-3">
+    @Html.Partial("~/Views/Shared/_LateralMenu.cshtml")
+</div>
+
+@{
+    var bloquearBotoesDeAcoes = string.Empty;
+    
+    if (Model != null)
+    {
+        if (Model.Bloquear_Botoes_De_Acoes)
+        {
+            bloquearBotoesDeAcoes = Model.Bloquear_Botoes_De_Acoes ? "disabled" : string.Empty;         
+        }
+    }   
+}
+
+<div class="col-lg-9">
+
+    <br />
+
+    <ol class="breadcrumb">
+        <li><a href="/">Home</a></li>
+        <li><a href="/Posts/Posts">Posts</a></li>
+        <li><a href="/Posts/Listagem">Listagem</a></li>
+        <li class="active">Proposta de Lei</li>
+    </ol>
+
+    <!-- MESSAGE RESULT -->
+    <div id="resultSuccess"></div>
+    <div id="resultFailed"></div>
+
+    <h3><i class="glyphicon glyphicon-floppy-saved"></i> Proposta de Lei: @Model.Titulo</h3>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="form-group">
+                <label>TÍTULO</label>
+                <p>@Model.Titulo</p>
+            </div>
+
+            <div class="form-group">
+                <label>DESCRIÇÃO</label>
+                <p>@Model.Descricao</p>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label>LOCAL</label>
+                        <p>@Model.Local</p>
+                    </div>
+
+                    <div class="form-group">
+                        <label>ABERTO AO PÚBLICO?</label>
+                        @if (Model.Aberto_ao_Publico != null)
+                        {
+                            if (Model.Aberto_ao_Publico <= 0)
+                            {
+                                <p>Não</p>
+                            }
+                            else
+                            {
+                                <p>Sim</p>
+                            }
+                        }
+                        else
+                        {
+                            <p>Não</p>
+                        }
+                    </div>
+
+                    <div class="form-group">
+                        <label>DATA DE VOTAÇÃO</label>
+                        <p>@Model.Data_Votacao</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label>DATA DE CRIAÇÃO</label>
+                        <p>@Model.Data_Criacao</p>
+                    </div>
+
+                    <div class="form-group">
+                        <label>DATA DE ALTERAÇÃO</label>
+                        <p>@Model.Data_Alteracao</p>
+                    </div>
+
+                    <div class="form-group">
+                        <label>OBSERVAÇÃO DO MODERADOR</label>
+
+                        @if (!string.IsNullOrEmpty(Model.Observacao_Moderador))
+                        {
+                            <p>@Model.Observacao_Moderador</p>
+                        }
+                        else
+                        {
+                            <p>[NÃO INFORMADO]</p>
+                        }                       
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-6">
+            <button type="button" id="btnVoltar" name="btnVoltar" onclick="window.history.go(-1); return false;" class="btn btn-default">
+                <i class="glyphicon glyphicon-chevron-left"></i> Voltar
+            </button>
+
+            <div class="btn btn-group">
+                <button type="button" id="btnAprovar" @bloquearBotoesDeAcoes onclick="aprovarPost('@Model.Guid', '@Model.Titulo');" class="btn btn-primary">Aprovar</button>
+                <button type="button" id="btnRepetido" @bloquearBotoesDeAcoes onclick="postRepetido('@Model.Guid', '@Model.Titulo');" class="btn btn-warning">Repetido</button>
+                <button type="button" id="btnNegar" @bloquearBotoesDeAcoes onclick="negarPost('@Model.Guid', '@Model.Titulo');" class="btn btn-danger">Negar</button>
+            </div>
+        </div>
+
+        <div class="col-lg-6">
+
+        </div>
+    </div>
+</div>
+
+@section scripts {
+
+    <script>
+        var REFRESH_PAGE = false;
+    </script>
+    <script async src="~/Scripts/common/messagesCommon.js"></script>
+    <script src="~/Scripts/meusScripts/post-acoes.js"></script>
+}

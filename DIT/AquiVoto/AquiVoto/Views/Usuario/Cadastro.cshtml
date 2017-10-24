@@ -1,0 +1,184 @@
+﻿@model AquiVoto.Models.UsuarioModel
+
+<div class="row">
+
+    <!-- DIV TABS-->
+    <div id="divTabs">
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active">
+                <a id="tabBandsLoad" href="#tabMyBands" aria-controls="tabMyBands"
+                   role="tab" data-toggle="tab">Minhas Bandas</a>
+            </li>
+
+            <li role="presentation">
+                <a href="#tabInvites" id="tabInvitesLoad" aria-controls="tabInvites" role="tab"
+                   data-toggle="tab">Convites (enviados / recebidos)</a>
+            </li>
+        </ul>
+
+        <br />
+        <br />
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+
+            <!-- TAB MY BANDS -->
+            <div role="tabpanel" class="tab-pane active fade in" id="tabMyBands">
+
+                <!-- MESSAGE RESULT -->
+                <div style="margin-top:-15px">
+                    <div id="resultSuccessTabBands"></div>
+                    <div id="resultFailedTabBands"></div>
+                </div>
+
+                <!-- AJAX-->
+                <div id="divBandsPartialList">
+                </div>
+
+            </div>
+
+            <!-- TAB INVITES -->
+            <div role="tabpanel" class="tab-pane fade in" id="tabInvites">
+
+                <!-- MESSAGE RESULT -->
+                <div style="margin-top:-15px">
+                    <div id="resultSuccessTabInvites"></div>
+                    <div id="resultFailedTabInvites"></div>
+                </div>
+
+                <!-- AJAX-->
+                <div id="divInvitesPartialList">
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    @*<div class="col-lg-3">
+        @Html.Partial("~/Views/Shared/_LateralMenu.cshtml")
+    </div>*@
+
+    @*<div class="col-lg-9">
+
+        <br />
+
+        <ol class="breadcrumb">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Usuário</a></li>
+            <li class="active">Cadastro</li>
+        </ol>
+
+        <h3>CADASTRO DE USUÁRIO</h3>
+
+         MESSAGE RESULT 
+        <div id="resultSuccess"></div>
+        <div id="resultFailed"></div>
+
+        <div class="row">
+            <form id="formUsuario">
+
+                @Html.ValidationSummary(true)
+                @Html.AntiForgeryToken()
+
+                @Html.HiddenFor(f => f.Guid, new { @id = "hddUsuarioGuid", @name = "hddUsuarioGuid" })
+
+                <div class="col-lg-4">
+                    <div class="form-group">
+                        <label>Nome</label>
+                        @Html.TextBoxFor(f => f.Nome, new
+   {
+       @id = "txtNome",
+       @name = "txtNome",
+       @placeholder = "Digite seu nome",
+       @class = "form-control",
+       @maxlenght = "60"
+   })
+                    </div>
+
+                    <div class="form-group">
+                        <label>Nome Social</label>
+                        @Html.TextBoxFor(f => f.Nome_Social, new
+   {
+       @id = "txtNomeSocial",
+       @name = "txtNomeSocial",
+       @placeholder = "Digite seu nome social, caso tenha",
+       @class = "form-control",
+       @maxlenght = "60"
+   })
+                    </div>
+
+                    <div class="form-group">
+                        <label>Estado</label>
+                        <select id="ddEstado" name="ddEstado" class="form-control">
+                            <option value="">- Selecione -</option>
+                            <option value="RS">RS</option>
+                            <option value="SC">SC</option>
+                            <option value="SP">SP</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Cidade</label>
+                        <select id="ddCidade" name="ddCidade" class="form-control">
+                            <option value="">- Selecione -</option>
+                            <option value="Porto Alegre">Porto Alegre</option>
+                            <option value="Gravataí">Gravataí</option>
+                            <option value="São">São Paulo</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <br />
+                        <button id="btnVoltar" name="btnVoltar" class="btn btn-default" type="button">Voltar</button>
+                        <button id="btnSalvar" name="btnSalvar" class="btn btn-primary" type="button">Salvar</button>
+                    </div>
+
+                </div>
+
+                <div class="col-lg-8">
+
+                    <div class="form-group">
+                        <label>Email</label>
+                        @Html.TextBoxFor(f => f.Email, new
+   {
+       @id = "txtEmail",
+       @name = "txtEmail",
+       @class = "form-control",
+       @placeholder = "Digite seu email",
+       @maxlenght = "80"
+   })
+                    </div>
+
+                    <div class="form-group">
+                        <label>Senha</label>
+                        @Html.TextBoxFor(f => f.Senha, new
+   {
+       @id = "txtSenha",
+       @name = "txtSenha",
+       @placeholder = "Digite sua senha",
+       @class = "form-control",
+       @maxlenght = "20"
+   })
+
+                    </div>
+
+                    <div class="form-group">
+                        <label>Repita a Senha</label>
+                        @Html.TextBoxFor(f => f.Senha_Repetida, new
+   {
+       @id = "txtSenhaRepetida",
+       @name = "txtSenhaRepetida",
+       @placeholder = "Digite novamente sua senha",
+       @class = "form-control",
+       @maxlenght = "20"
+   })
+
+                    </div>
+                </div>
+
+            </form>
+        </div>
+
+    </div>*@
+</div>

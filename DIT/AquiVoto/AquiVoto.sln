@@ -1,0 +1,94 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AquiVoto", "AquiVoto\AquiVoto.csproj", "{006E68D6-BB73-49F1-A071-E21C437535F1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AquiVoto.Models", "AquiVoto.Models\AquiVoto.Models.csproj", "{A3235FA1-73AC-47CF-8717-86A2149C1629}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AquiVoto.DataModels", "AquiVoto.DataModels\AquiVoto.DataModels.csproj", "{5C5AEB5C-3402-47FB-B332-907CABBD1558}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AquiVoto.Services", "AquiVoto.Services\AquiVoto.Services.csproj", "{3A9A9F82-17BA-4D48-8C6D-C87C520482A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AquiVoto.Controllers", "AquiVoto.Controllers\AquiVoto.Controllers.csproj", "{236EC5C7-129F-4A9E-906A-21978AB3D76B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AquiVoto.Repositories", "AquiVoto.Repositories\AquiVoto.Repositories.csproj", "{38DA64B2-695E-4260-82FC-BFD52DC432F8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AquiVoto.Common", "AquiVoto.Common\AquiVoto.Common.csproj", "{2ED3F004-3AF0-4258-81A1-55B82933B4CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AquiVoto.Services.Interfaces", "AquiVoto.Services.Interfaces\AquiVoto.Services.Interfaces.csproj", "{1A3A1677-E2E0-451B-AF66-9391C2DD05CB}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 9
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://williamalveslp.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = AquiVoto\\AquiVoto.csproj
+		SccProjectName1 = AquiVoto
+		SccLocalPath1 = AquiVoto
+		SccProjectUniqueName2 = AquiVoto.Models\\AquiVoto.Models.csproj
+		SccProjectName2 = AquiVoto.Models
+		SccLocalPath2 = AquiVoto.Models
+		SccProjectUniqueName3 = AquiVoto.DataModels\\AquiVoto.DataModels.csproj
+		SccProjectName3 = AquiVoto.DataModels
+		SccLocalPath3 = AquiVoto.DataModels
+		SccProjectUniqueName4 = AquiVoto.Services\\AquiVoto.Services.csproj
+		SccProjectName4 = AquiVoto.Services
+		SccLocalPath4 = AquiVoto.Services
+		SccProjectUniqueName5 = AquiVoto.Controllers\\AquiVoto.Controllers.csproj
+		SccProjectName5 = AquiVoto.Controllers
+		SccLocalPath5 = AquiVoto.Controllers
+		SccProjectUniqueName6 = AquiVoto.Repositories\\AquiVoto.Repositories.csproj
+		SccProjectName6 = AquiVoto.Repositories
+		SccLocalPath6 = AquiVoto.Repositories
+		SccProjectUniqueName7 = AquiVoto.Common\\AquiVoto.Common.csproj
+		SccProjectName7 = AquiVoto.Common
+		SccLocalPath7 = AquiVoto.Common
+		SccProjectUniqueName8 = AquiVoto.Services.Interfaces\\AquiVoto.Services.Interfaces.csproj
+		SccProjectName8 = AquiVoto.Services.Interfaces
+		SccLocalPath8 = AquiVoto.Services.Interfaces
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{006E68D6-BB73-49F1-A071-E21C437535F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{006E68D6-BB73-49F1-A071-E21C437535F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{006E68D6-BB73-49F1-A071-E21C437535F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{006E68D6-BB73-49F1-A071-E21C437535F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3235FA1-73AC-47CF-8717-86A2149C1629}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3235FA1-73AC-47CF-8717-86A2149C1629}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3235FA1-73AC-47CF-8717-86A2149C1629}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3235FA1-73AC-47CF-8717-86A2149C1629}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C5AEB5C-3402-47FB-B332-907CABBD1558}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C5AEB5C-3402-47FB-B332-907CABBD1558}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C5AEB5C-3402-47FB-B332-907CABBD1558}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C5AEB5C-3402-47FB-B332-907CABBD1558}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A9A9F82-17BA-4D48-8C6D-C87C520482A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A9A9F82-17BA-4D48-8C6D-C87C520482A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A9A9F82-17BA-4D48-8C6D-C87C520482A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A9A9F82-17BA-4D48-8C6D-C87C520482A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{236EC5C7-129F-4A9E-906A-21978AB3D76B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{236EC5C7-129F-4A9E-906A-21978AB3D76B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{236EC5C7-129F-4A9E-906A-21978AB3D76B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{236EC5C7-129F-4A9E-906A-21978AB3D76B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38DA64B2-695E-4260-82FC-BFD52DC432F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38DA64B2-695E-4260-82FC-BFD52DC432F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38DA64B2-695E-4260-82FC-BFD52DC432F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38DA64B2-695E-4260-82FC-BFD52DC432F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2ED3F004-3AF0-4258-81A1-55B82933B4CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2ED3F004-3AF0-4258-81A1-55B82933B4CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2ED3F004-3AF0-4258-81A1-55B82933B4CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2ED3F004-3AF0-4258-81A1-55B82933B4CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A3A1677-E2E0-451B-AF66-9391C2DD05CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A3A1677-E2E0-451B-AF66-9391C2DD05CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A3A1677-E2E0-451B-AF66-9391C2DD05CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A3A1677-E2E0-451B-AF66-9391C2DD05CB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

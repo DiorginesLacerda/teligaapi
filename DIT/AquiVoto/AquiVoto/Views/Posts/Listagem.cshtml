@@ -1,0 +1,47 @@
+﻿@model AquiVoto.Models.PostModelList
+
+<!-- modals-->
+@Html.Partial("~/Views/Posts/_modalsPosts.cshtml")
+
+<div class="col-lg-3">
+    @Html.Partial("~/Views/Shared/_LateralMenu.cshtml")
+</div>
+
+<div class="col-lg-9">
+
+    <br />
+
+    <ol class="breadcrumb">
+        <li><a href="/">Home</a></li>
+        <li><a href="/Posts/Posts">Posts</a></li>
+        <li class="active">Listagem</li>
+    </ol>
+
+    <h3>
+        <i class="glyphicon glyphicon-th-list"></i> Listagem de Posts
+        (<label style="font-weight:normal" id="titleQuantidade">0</label>)
+    </h3>
+
+    <!-- MESSAGE RESULT -->
+    <div id="resultSuccess"></div>
+    <div id="resultFailed"></div>
+
+    <br />
+
+    <input type="hidden" id="paginaAtual" name="paginaAtual" value="1"/>
+ 
+    <!-- partial list-->
+    <div id="divPostsList">
+    </div>
+
+</div>
+
+@section scripts {
+    <script>
+        var REFRESH_PAGE = true;
+    </script>
+
+    <script async src="~/Scripts/common/messagesCommon.js"></script>
+    <script src="~/Scripts/meusScripts/post-listagem.js"></script>
+    <script src="~/Scripts/meusScripts/post-acoes.js"></script>
+}

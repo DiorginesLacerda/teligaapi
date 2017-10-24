@@ -1,0 +1,59 @@
+﻿<div class="col-lg-3">
+    @Html.Partial("~/Views/Shared/_LateralMenu.cshtml")
+</div>
+
+<style type="text/css">
+    .cardImgs {
+        height: 150px;
+        width: 20rem;
+        border: 5px solid #85C121;
+    }
+
+    #btnAguardandoModerador, #btnRespondidos {
+        width: 100%;
+    }
+</style>
+
+<div class="col-lg-9">
+
+    <br />
+
+    <ol class="breadcrumb">
+        <li><a href="/">Home</a></li>
+        <li class="active">Posts</li>
+    </ol>
+
+    <div class="col-lg-12">
+
+        <div class="col-lg-4">
+            <div class="card" style="width: 20rem;">
+                <a href="/Posts/Listagem">
+                    <img class="card-img-top cardImgs" src="~/Imagens/Posts/votacao.gif" alt="Foto de urna para votação">
+                </a>
+                <div class="card-body">
+                    <h4 class="card-title">Aguardando Moderador</h4>
+                    <p class="card-text">Posts que os usuários enviaram para o AquiVoto e aguardam serem informados o status adequado.</p>
+                    @Html.ActionLink("Acessar", "Listagem", "Posts", new { @id = "btnAguardandoModerador", @name = "btnAguardandoModerador", @class = "btn btn-default" })
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4">
+            <div class="card" style="width: 20rem;">
+                <a href="/Posts/Respondidos">
+                    <img class="card-img-top cardImgs" src="~/Imagens/Posts/lei_respondidos.jpg" alt="Foto simbolizando decisão de Juiz">
+                </a>
+                <div class="card-body">
+                    <h4 class="card-title">Respondidos</h4>
+                    <p class="card-text">Posts que já foi informados o status adequado, você os encontrará aqui como um histórico de destinos.</p>
+                    @Html.ActionLink("Acessar", "Respondidos", "Posts", new { @id = "btnRespondidos", @name = "btnRespondidos", @class = "btn btn-default" })
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4">
+
+        </div>
+    </div>
+
+</div>

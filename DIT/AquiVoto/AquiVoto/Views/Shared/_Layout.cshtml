@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AquiVoto - Admin</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+    <!-- JQUERY-->
+    <script src="~/Scripts/jquery-3.2.1.min.js"></script>
+
+    <!-- MENU LATERAL -->
+    <link href="~/Content/MeusCSS/bootstrap-menu-lateral.css" rel="stylesheet" />
+
+</head>
+<body>
+
+    <!-- img loading -->
+    <div id='loading' style='display:none; position:fixed; top:43%; left:48%; z-index:1234;'>
+        <img src='~/Imagens/Spinners/spinner1.gif' alt='Loading...' />
+    </div>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Te Liga", "Home", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                @*<ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Home", "Home", "Home")</li>
+                    <li>@Html.ActionLink("Cadastro", "Cadastro", "Usuario")</li>
+                </ul>*@
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li>@Html.ActionLink("Acesso", "Login", "Autenticacao")</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()        
+    </div>
+
+    @Html.Partial("~/Views/Shared/_Rodape.cshtml")
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

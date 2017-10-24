@@ -1,0 +1,168 @@
+﻿<style type="text/css">
+    .marginBodyModal {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    .headerGreen {
+        background-color: #449d44;
+        color: #fff;
+    }
+
+    .headerRed {
+        background-color: #c9302c;
+        color: #fff;
+    }
+
+    .headerWarning {
+        background-color: #f0ad4e;
+        color: #fff;
+    }
+
+    .headerBlue {
+        background-color: #5bc0de;
+        color: #fff;
+    }
+</style>
+
+<!-- MODAL APROVAR -->
+<div class="modal fade" id="modalAprovar" tabindex="-1" role="dialog" aria-labelledby="modalAprovarMessageLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header headerBlue">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="modalAprovarMessageLabel">APROVAR POST</h4>
+            </div>
+            <div class="modal-body">
+
+                <div class="marginBodyModal">
+
+                    <div class="form-group">
+                        <h5>Você tem certeza que deseja Aprovar este post?</h5>
+                    </div>
+
+                    <br />
+
+                    <div class="form-group">
+                        <div>
+                            <label>TÍTULO</label>
+                            <!-- titulo sera carregado por javascript-->
+                            <h5 id="lblTituloAprovar"></h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <div class="btn-group btn-group-justified">
+                    <div class="btn-group">
+                        <button type="button" id="btnModalNaoAprovar" class="btn btn-lg btn-secondary" data-dismiss="modal">Não</button>
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" id="btnModalAprovar" class="btn btn-lg btn-primary">Sim</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- MODAL REPETIDO -->
+<div class="modal fade" id="modalRepetido" tabindex="-1" role="dialog" aria-labelledby="modalRepetidoMessageLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header headerWarning">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="modalRepetidoMessageLabel">POST REPETIDO</h4>
+            </div>
+            <div class="modal-body">
+
+                <div class="marginBodyModal">
+
+                    <div class="form-group">
+                        <h5>Você tem certeza que deseja salvar como post Repetido?</h5>
+                    </div>
+
+                    <br />
+
+                    <div class="form-group">
+                        <div>
+                            <label>TÍTULO</label>
+                            <!-- titulo sera carregado por javascript-->
+                            <h5 id="lblTituloRepetido"></h5>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>OBSERVAÇÃO (OPCIONAL)</label>
+                        <textarea id="txtAreaObservacaoRepetido" name="txtAreaObservacaoRepetido" class="form-control" rows="3"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <div class="btn-group btn-group-justified">
+                    <div class="btn-group">
+                        <button type="button" id="btnModalNaoRepetido" class="btn btn-lg btn-secondary" data-dismiss="modal">Não</button>
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" id="btnModalRepetido" class="btn btn-lg btn-warning">Sim</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- MODAL NEGAR POST -->
+<div class="modal fade" id="modalNegar" tabindex="-1" role="dialog" aria-labelledby="modalNegarMessageLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header headerRed">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="modalNegarMessageLabel">NEGAR POST</h4>
+            </div>
+            <div class="modal-body">
+
+                <div class="marginBodyModal">
+
+                    <div class="form-group">
+                        <h5>Você tem certeza que deseja negar este post?</h5>
+                    </div>
+
+                    <br />
+
+                    <div class="form-group">
+                        <div>
+                            <label>TÍTULO</label>
+                            <!-- titulo sera carregado por javascript-->
+                            <h5 id="lblTituloNegar"></h5>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>OBSERVAÇÃO (OPCIONAL)</label>
+                        <textarea id="txtAreaObservacaoNegar" name="txtAreaObservacaoNegar" class="form-control" rows="3"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <div class="btn-group btn-group-justified">
+                    <div class="btn-group">
+                        <button type="button" id="btnModalNaoNegar" class="btn btn-lg btn-default" data-dismiss="modal">Não</button>
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" id="btnModalNegar" class="btn btn-lg btn-danger">Sim</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

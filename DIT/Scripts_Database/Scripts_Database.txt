@@ -1,0 +1,57 @@
+
+-- ******************** ESTRUTURAS DO BANCO ******************
+
+CREATE DATABASE Aquivotodb;
+
+USE Aquivotodb;
+
+CREATE TABLE Usuario(
+Usuario_Id BIGINT PRIMARY KEY IDENTITY(1,1),
+Tipo_Cadastro INT NOT NULL,
+Guid VARCHAR(36),
+Nome VARCHAR(60) NOT NULL,
+Estado VARCHAR(25),
+Cidade VARCHAR(40),
+Email VARCHAR(80) NOT NULL,
+Senha VARCHAR(20) NOT NULL,
+Ativo SMALLINT,
+Data_Cadastro DATETIME NOT NULL,
+Data_Alteracao DATETIME NOT NULL
+);
+
+GO 
+
+CREATE TABLE Post(
+Post_Id BIGINT PRIMARY KEY IDENTITY(1,1),
+Usuario_Id BIGINT,
+Titulo VARCHAR(30) NOT NULL,
+Descricao VARCHAR(MAX) NOT NULL,
+Aberto_ao_Publico SMALLINT,
+Local VARCHAR(40),
+Post_Semelhante_Repetido SMALLINT,
+Status_Post VARCHAR(20),
+Observacao_Moderador VARCHAR(100),
+Data_Votacao DATETIME,
+Data_Criacao DATETIME NOT NULL,
+Data_Alteracao DATETIME NOT NULL
+);
+
+GO
+
+-- **************** INSERTS ****************
+-
+INSERT INTO Post(Usuario_Id, Guid, Titulo, Descricao, Aberto_ao_Publico, Local, Data_Votacao, Data_Criacao, Data_Alteracao, Post_Semelhante_Repetido, Status_Post, Observacao_Moderador)
+VALUES (1,'37ff25de-a2c1-46ac-8fab-8ac32d81033b', 'Regulamentação Uber', 'Descrição e mais descrição.', 1, 'Brasília', GETDATE(), GETDATE(), GETDATE(), 0, 'NOVO', null);
+GO
+
+INSERT INTO Post(Usuario_Id, Guid, Titulo, Descricao, Aberto_ao_Publico, Local, Data_Votacao, Data_Criacao, Data_Alteracao, Post_Semelhante_Repetido, Status_Post, Observacao_Moderador)
+VALUES (1,'37ff25de-a2c1-46ac-8fab-8ac32d81033b', 'Regulamentação Uber', 'Descrição e mais descrição.', 1, 'Brasília', GETDATE(), GETDATE(), GETDATE(), 0, 'NOVO', null);
+GO
+
+INSERT INTO Post(Usuario_Id, Guid, Titulo, Descricao, Aberto_ao_Publico, Local, Data_Votacao, Data_Criacao, Data_Alteracao, Post_Semelhante_Repetido, Status_Post, Observacao_Moderador)
+VALUES (1,'37ff25de-a2c1-46ac-8fab-8ac32d81033b', 'Regulamentação Uber', 'Descrição e mais descrição.', 1, 'Brasília', GETDATE(), GETDATE(), GETDATE(), 0, 'NOVO', null);
+GO
+
+INSERT INTO Post(Usuario_Id, Guid, Titulo, Descricao, Aberto_ao_Publico, Local, Data_Votacao, Data_Criacao, Data_Alteracao, Post_Semelhante_Repetido, Status_Post, Observacao_Moderador)
+VALUES (1,'37ff25de-a2c1-46ac-8fab-8ac32d81033b', 'Regulamentação Uber', 'Descrição e mais descrição.', 1, 'Brasília', GETDATE(), GETDATE(), GETDATE(), 0, 'NOVO', null);
+GO

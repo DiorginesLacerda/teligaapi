@@ -1,0 +1,104 @@
+﻿@model AquiVoto.Models.PostModelList
+
+<div class="col-lg-3">
+    @Html.Partial("~/Views/Shared/_LateralMenu.cshtml")
+</div>
+
+<div class="col-lg-9">
+
+    <br />
+
+    <ol class="breadcrumb">
+        <li><a href="/">Home</a></li>
+        <li><a href="/Posts/Posts">Posts</a></li>
+        <li class="active">Respondidos</li>
+    </ol>
+
+    <h3><i class="glyphicon glyphicon-lock"></i> Posts Respondidos</h3>
+
+    <br />
+
+    <!-- DIV TABS-->
+    <div id="divTabs">
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active">
+                <a id="tabAprovadosId" href="#tabAprovados" aria-controls="tabAprovados"
+                   role="tab" data-toggle="tab">Aprovados (<label style="font-weight:normal" id="titleQuantidadeApovados">0</label>)</a>
+            </li>
+
+            <li role="presentation">
+                <a id="tabRepetidosId" href="#tabRepetidos" aria-controls="tabRepetidos" role="tab"
+                   data-toggle="tab">Repetidos (<label style="font-weight:normal" id="titleQuantidadeRepetidos">?</label>)</a>
+            </li>
+
+            <li role="presentation">
+                <a id="tabNegadosId" href="#tabNegados" aria-controls="tabNegados" role="tab"
+                   data-toggle="tab">Negados (<label style="font-weight:normal" id="titleQuantidadeNegados">?</label>)</a>
+            </li>
+        </ul>
+
+        <br />
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+
+            <!-- TAB APROVADOS -->
+            <div role="tabpanel" class="tab-pane active fade in" id="tabAprovados">
+
+                <!-- MESSAGE RESULT -->
+                <div style="margin-top:-15px">
+                    <div id="resultSuccessTabAprovados"></div>
+                    <div id="resultFailedTabAprovados"></div>
+                </div>
+
+                <input type="hidden" id="paginaAtualAprovados" name="paginaAtualAprovados" />
+
+                <!-- AJAX-->
+                <div id="divAprovadosPartialList">
+                </div>
+
+            </div>
+
+            <!-- TAB REPETIDOS -->
+            <div role="tabpanel" class="tab-pane fade in" id="tabRepetidos">
+
+                <!-- MESSAGE RESULT -->
+                <div style="margin-top:-15px">
+                    <div id="resultSuccessTabRepetidos"></div>
+                    <div id="resultFailedTabRepetidos"></div>
+                </div>
+
+                <input type="hidden" id="paginaAtualARepetidos" name="paginaAtualARepetidos" />
+
+                <!-- AJAX-->
+                <div id="divRepetidosPartialList">
+                </div>
+
+            </div>
+
+            <!-- TAB NEGADOS -->
+            <div role="tabpanel" class="tab-pane fade in" id="tabNegados">
+
+                <!-- MESSAGE RESULT -->
+                <div style="margin-top:-15px">
+                    <div id="resultSuccessTabNegados"></div>
+                    <div id="resultFailedTabNegados"></div>
+                </div>
+
+                <input type="hidden" id="paginaAtualNegados" name="paginaAtualNegados" />
+
+                <!-- AJAX-->
+                <div id="divNegadosPartialList">
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+@section scripts {
+    <script async src="~/Scripts/common/messagesCommon.js"></script>
+    <script src="~/Scripts/meusScripts/post-respondidos.js"></script>
+}

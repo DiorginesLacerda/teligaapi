@@ -1,0 +1,70 @@
+﻿@model AquiVoto.Models.PostModelList
+
+@if (Model != null)
+{
+    if (Model.PostsList != null)
+    {
+        if (Model.PostsList.Count() <= 0)
+        {
+            <br />
+
+            <div class="alert alert-warning" role="alert" style="margin-right:1%">
+                <strong>Não há posts para exibição.</strong>
+            </div>
+        }
+        else
+        {
+            <table class="table table-hover table-condensed">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Titulo</th>
+                        <th>Data de Votação</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    @foreach (var item in Model.PostsList)
+                    {
+                        <tr>
+                            <td>@item.Post_Id</td>
+                            <td>@Html.ActionLink(item.Titulo, "Cadastro", "Posts", new { @id = item.Guid }, null)</td>
+                            <td>@item.Data_Votacao.ToString()</td>
+                            <td><p style="color:red"><b>@item.Status_Post</b></p></td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+    }
+    else
+    {
+        <div class="alert alert-danger" role="alert" style="margin-right:1%">
+            <strong>Erro ocorreu no carregamento da listagem. Tente mais tarde.</strong>
+        </div>
+    }
+}
+else
+{
+    <div class="alert alert-warning" role="alert" style="margin-right:1%">
+        <strong>Erro ocorreu no carregamento dos posts. Tente mais tarde.</strong>
+    </div>
+}
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        var totalDeRegistros = 0;
+
+        if ('@Model' != null) {
+            if ('@Model.PostsList' != null) {
+                totalDeRegistros = '@Model.PostsList.TotalItemCount';
+            }
+        }
+
+        $("#titleQuantidadeNegados").empty();
+        $("#titleQuantidadeNegados").append(totalDeRegistros);
+    });
+</script>

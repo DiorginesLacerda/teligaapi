@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7A427A44-1885-4C99-8C05-35B8C14AA50E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AquiVoto.Api</RootNamespace>
+    <AssemblyName>AquiVoto.Api</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Http">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="PostApi.cs" />
+    <Compile Include="UsuarioApi.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AquiVoto.Common\AquiVoto.Common.csproj">
+      <Project>{2ed3f004-3af0-4258-81a1-55b82933b4ce}</Project>
+      <Name>AquiVoto.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AquiVoto.Controllers\AquiVoto.Controllers.csproj">
+      <Project>{236ec5c7-129f-4a9e-906a-21978ab3d76b}</Project>
+      <Name>AquiVoto.Controllers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AquiVoto.DataModels\AquiVoto.DataModels.csproj">
+      <Project>{5c5aeb5c-3402-47fb-b332-907cabbd1558}</Project>
+      <Name>AquiVoto.DataModels</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AquiVoto.Models\AquiVoto.Models.csproj">
+      <Project>{a3235fa1-73ac-47cf-8717-86a2149c1629}</Project>
+      <Name>AquiVoto.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AquiVoto.Repositories\AquiVoto.Repositories.csproj">
+      <Project>{38da64b2-695e-4260-82fc-bfd52dc432f8}</Project>
+      <Name>AquiVoto.Repositories</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AquiVoto.Services.Interfaces\AquiVoto.Services.Interfaces.csproj">
+      <Project>{1a3a1677-e2e0-451b-af66-9391c2dd05cb}</Project>
+      <Name>AquiVoto.Services.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AquiVoto.Services\AquiVoto.Services.csproj">
+      <Project>{3a9a9f82-17ba-4d48-8c6d-c87c520482a8}</Project>
+      <Name>AquiVoto.Services</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

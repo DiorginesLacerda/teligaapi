@@ -9,5 +9,6 @@ namespace AquiVoto.Services.Interfaces
 {
     public interface IUsuarioService : IGenericsCRUD<Usuario>
     {
+        Usuario ChecarAutenticacao(string email, string senha);
     }
 }

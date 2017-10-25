@@ -1,0 +1,8 @@
+C:\Users\nilto\Documents\Visual Studio 2017\Projects\AquiVoto\DIT\AquiVoto\AquiVoto.Models\bin\Debug\AquiVoto.Models.dll
+C:\Users\nilto\Documents\Visual Studio 2017\Projects\AquiVoto\DIT\AquiVoto\AquiVoto.Models\bin\Debug\AquiVoto.Models.pdb
+C:\Users\nilto\Documents\Visual Studio 2017\Projects\AquiVoto\DIT\AquiVoto\AquiVoto.Models\bin\Debug\System.Web.Mvc.dll
+C:\Users\nilto\Documents\Visual Studio 2017\Projects\AquiVoto\DIT\AquiVoto\AquiVoto.Models\bin\Debug\System.Web.Mvc.xml
+C:\Users\nilto\Documents\Visual Studio 2017\Projects\AquiVoto\DIT\AquiVoto\AquiVoto.Models\obj\Debug\AquiVoto.Models.csprojResolveAssemblyReference.cache
+C:\Users\nilto\Documents\Visual Studio 2017\Projects\AquiVoto\DIT\AquiVoto\AquiVoto.Models\obj\Debug\AquiVoto.Models.csproj.CoreCompileInputs.cache
+C:\Users\nilto\Documents\Visual Studio 2017\Projects\AquiVoto\DIT\AquiVoto\AquiVoto.Models\obj\Debug\AquiVoto.Models.dll
+C:\Users\nilto\Documents\Visual Studio 2017\Projects\AquiVoto\DIT\AquiVoto\AquiVoto.Models\obj\Debug\AquiVoto.Models.pdb

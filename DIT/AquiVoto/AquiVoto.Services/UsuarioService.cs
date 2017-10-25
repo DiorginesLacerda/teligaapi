@@ -79,9 +79,9 @@ namespace AquiVoto.Services
             entity.Data_Alteracao = DateTime.Now;
         }
 
-        public Usuario ChecarAutenticacao(Usuario entity)
+        public Usuario ChecarAutenticacao(string email, string senha)
         {
-            return _usuarioRepository.ChecarAutenticacao(entity);
+            return _usuarioRepository.ChecarAutenticacao(email, senha);
         }
     }
 }

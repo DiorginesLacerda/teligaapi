@@ -5,6 +5,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using AquiVoto.Common;
 
 namespace AquiVoto.Repositories
 {
@@ -136,14 +137,15 @@ namespace AquiVoto.Repositories
             return match;
         }
 
-        public Usuario ChecarAutenticacao(Usuario entity)
+        public Usuario ChecarAutenticacao(string email, string senha)
         {
             try
             {
+                senha = Encrypt.GenerateSHA256String(senha);
                 using (var ctx = new DatabaseContext())
                 {
-                    var match = ctx.Usuarios.Where(f => (f.Email == entity.Email)
-                                                      && (f.Senha == entity.Senha)
+                    var match = ctx.Usuarios.Where(f => (f.Email == email)
+                                                      && (f.Senha == senha)
                                                       && (f.Ativo == 1))
                                                       .FirstOrDefault();
                     return match;

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AquiVoto", "AquiVoto\AquiVoto.csproj", "{006E68D6-BB73-49F1-A071-E21C437535F1}"
 EndProject
@@ -19,37 +19,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AquiVoto.Common", "AquiVoto
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AquiVoto.Services.Interfaces", "AquiVoto.Services.Interfaces\AquiVoto.Services.Interfaces.csproj", "{1A3A1677-E2E0-451B-AF66-9391C2DD05CB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AquiVoto.Api", "AquiVoto.Api\AquiVoto.Api.csproj", "{7A427A44-1885-4C99-8C05-35B8C14AA50E}"
+EndProject
 Global
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 9
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = https://williamalveslp.visualstudio.com/
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = AquiVoto\\AquiVoto.csproj
-		SccProjectName1 = AquiVoto
-		SccLocalPath1 = AquiVoto
-		SccProjectUniqueName2 = AquiVoto.Models\\AquiVoto.Models.csproj
-		SccProjectName2 = AquiVoto.Models
-		SccLocalPath2 = AquiVoto.Models
-		SccProjectUniqueName3 = AquiVoto.DataModels\\AquiVoto.DataModels.csproj
-		SccProjectName3 = AquiVoto.DataModels
-		SccLocalPath3 = AquiVoto.DataModels
-		SccProjectUniqueName4 = AquiVoto.Services\\AquiVoto.Services.csproj
-		SccProjectName4 = AquiVoto.Services
-		SccLocalPath4 = AquiVoto.Services
-		SccProjectUniqueName5 = AquiVoto.Controllers\\AquiVoto.Controllers.csproj
-		SccProjectName5 = AquiVoto.Controllers
-		SccLocalPath5 = AquiVoto.Controllers
-		SccProjectUniqueName6 = AquiVoto.Repositories\\AquiVoto.Repositories.csproj
-		SccProjectName6 = AquiVoto.Repositories
-		SccLocalPath6 = AquiVoto.Repositories
-		SccProjectUniqueName7 = AquiVoto.Common\\AquiVoto.Common.csproj
-		SccProjectName7 = AquiVoto.Common
-		SccLocalPath7 = AquiVoto.Common
-		SccProjectUniqueName8 = AquiVoto.Services.Interfaces\\AquiVoto.Services.Interfaces.csproj
-		SccProjectName8 = AquiVoto.Services.Interfaces
-		SccLocalPath8 = AquiVoto.Services.Interfaces
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
@@ -87,8 +59,15 @@ Global
 		{1A3A1677-E2E0-451B-AF66-9391C2DD05CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1A3A1677-E2E0-451B-AF66-9391C2DD05CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1A3A1677-E2E0-451B-AF66-9391C2DD05CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A427A44-1885-4C99-8C05-35B8C14AA50E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A427A44-1885-4C99-8C05-35B8C14AA50E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A427A44-1885-4C99-8C05-35B8C14AA50E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A427A44-1885-4C99-8C05-35B8C14AA50E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {18815973-41F5-4D30-A6EA-87B1E4D49617}
 	EndGlobalSection
 EndGlobal

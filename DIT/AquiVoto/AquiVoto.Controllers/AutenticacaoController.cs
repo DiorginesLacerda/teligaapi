@@ -33,7 +33,7 @@ namespace AquiVoto.Controllers
                 var entity = _usuarioService.ParseToEntity(usuarioModel);
 
                 //verifica se o usuario existe.
-                var usuarioAutenticado = _usuarioService.ChecarAutenticacao(entity);
+                var usuarioAutenticado = _usuarioService.ChecarAutenticacao(entity.Email, entity.Senha);
 
                 if (usuarioAutenticado == null)
                 {

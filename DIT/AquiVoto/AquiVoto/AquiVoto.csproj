@@ -181,7 +181,6 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
-    <Compile Include="ValuesController1.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -265,9 +264,9 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AquiVoto.Api\AquiVoto.Api.csproj">
-      <Project>{7a427a44-1885-4c99-8c05-35b8c14aa50e}</Project>
-      <Name>AquiVoto.Api</Name>
+    <ProjectReference Include="..\AquiVoto.App\AquiVoto.App.csproj">
+      <Project>{a084d198-337f-4ce7-b1fc-ef230133ad20}</Project>
+      <Name>AquiVoto.App</Name>
     </ProjectReference>
     <ProjectReference Include="..\AquiVoto.Controllers\AquiVoto.Controllers.csproj">
       <Project>{236ec5c7-129f-4a9e-906a-21978ab3d76b}</Project>
